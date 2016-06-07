@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+        <title>PrimeFaces</title>
+    </h:head>
+
+    <h:body>
+        <h:form>
+            <h:outputLabel value="Nome" for="name" />
+            <h:inputText value="#{personController.person.name}" id="name"/>
+            <br/>
+            <h:outputLabel value="Apelido" for="nick" />
+            <h:inputText value="#{personController.person.nickname}" id="nick"/>
+            <br/>
+            <h:outputLabel value="Idade" for="age" />
+            <h:inputText value="#{personController.person.age}" id="age"/>
+            <br/>
+            <h:outputLabel value="Email" for="name" />
+            <h:inputText value="#{personController.person.email}" id="email"/>
+            <br/>
+            <h:commandButton value="Salvar" action="#{personController.persistPerson()}" />
+        </h:form>
+
+    </h:body>
+</html>
+
